@@ -1,0 +1,23 @@
+section.partners
+  .container
+    .partners__content
+      .partners__title Partners
+      .partners__description.
+        Most calendars are designed for teams. Slate is designed for freelancers
+    .partners__icon
+      -
+        const partnersIcon = [
+          '/img/icons/partners__icon-1.png',
+          '/img/icons/partners__icon-2.png',
+          '/img/icons/partners__icon-3.png',
+          '/img/icons/partners__icon-4.png',
+          '/img/icons/partners__icon-5.png',
+          '/img/icons/partners__icon-1.png',
+          '/img/icons/partners__icon-6.png',
+        ]
+      each partners in partnersIcon
+        div.partners__icon-items
+          img(class=partners__icon_item src=partners)
+    .fs__button.partners__button Try For Free
+
+

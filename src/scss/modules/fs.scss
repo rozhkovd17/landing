@@ -1,0 +1,259 @@
+.fs {
+  position: relative;
+  min-height: 100vh;
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  .menu_mobile {
+    display: none;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: $margin * 3 0;
+    @include desktop {
+      display: flex;
+      flex-direction: column;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+    @include tablet {
+      display: flex;
+    }
+    @include phone {
+      display: grid;
+      grid-template-rows: 50px;
+      grid-template-columns: repeat(3, 50px);
+      justify-content: space-between;
+    }
+    @include phone_sm {
+      display: flex;
+      flex-direction: row;
+      margin-top: -40px;
+      flex-wrap: wrap;
+    }
+
+    &__logo_1 {
+      @include phone_sm {
+        width: 40vw;
+      }
+    }
+    &__logo {
+      width: 186px;
+      height: 58px;
+      @include tablet {
+        width: 200px;
+        height: 90px;
+        justify-content: center;
+      }
+      @include phone {
+        height: 100px;
+        width: 30vw;
+      }
+      @include phone_sm {
+        width: 100%;
+      }
+    }
+    &__menu_items {
+      padding-top: $margin;
+      padding-left: $margin * 3;
+      padding-right: $margin * 3.5;
+      @include desktop {
+        margin-left: 0;
+      }
+      @include notebook {
+        margin-left: auto;
+      }
+    }
+    &__menu_item {
+      font-size: 15px;
+      font-weight: 400;
+      text-decoration: none;
+      color: $text_white;
+      line-height: 32px;
+      flex-wrap: wrap;
+
+      &:not(:last-child) {
+        margin-right: $margin * 3;
+      }
+    }
+
+    &__search_form,
+    &__search_button,
+    &_mobile_buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 54px;
+      background-color: $text_white;
+      border-radius: $margin * 2.5;
+    }
+    &_mobile_buttons {
+      display: flex;
+      width: 117px;
+      height: 52px;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      font-weight: 500;
+      color: $text_blue;
+      padding: 18px 38px;
+
+      &_open {
+        display: none;
+      }
+      @include phone {
+        display: block;
+      }
+      @include phone_sm {
+        display: flex;
+        margin-left: -40px;
+        width: 4vw;
+      }
+    }
+    &__search {
+      @include desktop {
+        margin-top: 20px;
+      }
+      @include phone {
+        display: block;
+      }
+
+      &_form {
+        @include phone {
+          display: none;
+        }
+      }
+      &_button {
+        cursor: pointer;
+        font-size: $margin;
+        font-weight: 500;
+        min-width: 142px;
+        padding: 19px 38px;
+        margin-left: $margin;
+        color: $text_blue;
+        @include phone {
+          display: none;
+        }
+      }
+    }
+
+    &__menu {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @include phone {
+        display: none;
+      }
+    }
+  }
+
+  .fs__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $text_white;
+    margin-top: $margin * 10;
+    @include desktop {
+      margin-top: $margin * 5;
+    }
+    @include phone {
+      margin-top: $margin * 3;
+    }
+  }
+  &__title_top {
+    font-size: 22px;
+    font-weight: 700;
+  }
+  &__title {
+    margin: 17px 0 27px 0;
+    font-size: 55px;
+    font-weight: 900;
+    @include tablet {
+      text-align: center;
+      font-size: 46px;
+      font-weight: 400;
+    }
+    @include phone_sm {
+      font-size: 36px;
+    }
+  }
+  &__title_buttom {
+    font-size: 16px;
+    font-weight: 700;
+    max-width: 429px;
+    text-align: center;
+    @include tablet {
+      width: 318px;
+      text-align: center;
+    }
+  }
+
+  &__button {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 700;
+    border-radius: 35px;
+    width: 236px;
+    height: 65px;
+    background-color: $text_white;
+    color: $text_blue;
+    margin-top: $margin * 4;
+    padding: $margin $margin * 3;
+    @include tablet {
+      outline: 1px solid rgb(211, 210, 210);
+    }
+    @include phone_sm {
+      font-size: 18px;
+      width: 186px;
+      padding: $margin $margin * 2;
+    }
+  }
+
+  &__book {
+    width: 1054px;
+    max-height: 589px;
+    margin: 0 auto;
+    margin-top: 114px;
+    margin-bottom: 120px;
+    @include desktop {
+      width: 70vw;
+    }
+    @include notebook {
+      width: 80vw;
+    }
+    @include phone {
+      width: 80vw;
+    }
+    @include phone_sm {
+      width: 80vw;
+      margin-top: 76px;
+      margin-bottom: 50px !important;
+    }
+
+    &_img {
+      width: 100%;
+      @include notebook {
+        width: 80vw;
+      }
+      @include phone {
+        width: 100%;
+      }
+      @include phone_sm {
+        .fs__book_img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

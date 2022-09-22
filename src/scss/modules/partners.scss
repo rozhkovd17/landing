@@ -1,0 +1,145 @@
+.partners {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  @include tablet {
+    margin: initial;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title {
+    font-size: 46px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 17px;
+  }
+  &__description {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    width: 298px;
+    text-align: center;
+  }
+  &__icon-items:not(:last-child) {
+    margin-right: 50px;
+    @include notebook {
+      margin-right: 10px;
+    }
+    @include tablet {
+      margin-right: 13px;
+    }
+    @include tablet {
+      margin-right: 0;
+    }
+    @include phone {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+  &__icon {
+    display: flex;
+    justify-content: space-between;
+    max-width: 950px;
+    margin-top: 80px;
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      row-gap: 20px;
+      justify-content: center;
+    }
+    @include phone {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    &-items:nth-child(1) {
+      @include tablet {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        justify-self: center;
+      }
+    }
+    &-items:nth-child(2) {
+      @include tablet {
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        justify-self: center;
+      }
+    }
+    &-items:nth-child(3) {
+      @include tablet {
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        justify-self: center;
+      }
+    }
+    &-items:nth-child(4) {
+      @include tablet {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 2;
+        grid-row-end: 2;
+        justify-self: center;
+      }
+    }
+    &-items:nth-child(5) {
+      @include tablet {
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 2;
+        justify-self: center;
+      }
+    }
+    &-items:nth-child(6) {
+      @include tablet {
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 2;
+        justify-self: center;
+      }
+      @include phone {
+        display: none;
+      }
+    }
+    &-items:nth-child(7) {
+      @include tablet {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        justify-self: center;
+      }
+      @include phone {
+        display: none;
+      }
+    }
+  }
+  &__button {
+    margin: initial;
+    margin: 80px auto;
+    background-color: $text_blue;
+    color: $text_white;
+    width: 236px;
+    @include tablet {
+      margin: 65 auto 0 auto;
+    }
+    @include phone {
+      margin: 30px auto 50px auto;
+    }
+  }
+}

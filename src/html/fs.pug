@@ -1,0 +1,39 @@
+mixin menuLinks 
+  a.header__menu_item(href) Home
+  a.header__menu_item(href='#product') Product
+  a.header__menu_item(href='#pricing') Pricing
+  a.header__menu_item(href='#about') About
+  a.header__menu_item(href='#contacts') Contact
+
+section.fs
+  img.fs__bg(src='/img/bg.jpg' alt)
+  .container
+    header.header
+      .header__logo_1
+        img.header__logo(src='/img/logo.svg' alt)
+      .header__menu
+        nav.header__menu_items
+          +menuLinks 
+      .header_mobile_buttons.header_mobile_buttons_open.
+        Login
+      .header__search
+        form(action)
+          input.header__search_form(type='text' placeholder='Your Email')
+        .header__search_button Subsribe
+        #mobile-btn.header__mobile-menu_btn
+          div
+      #mobile-menu.header__memu_items.menu_mobile.menu_mobile_open
+        .menu__close-btn
+        .menu_wrap
+          +menuLinks
+    .fs__content
+      .fs__title_top At your fingertips
+      h1#title.fs__title Lightning fast prototyping
+      .fs__title_buttom.
+        Most calendars are designed for teams. Slate is designed for freelancers
+      .fs__button Try For Free
+    .fs__book
+      img.fs__book_img(src='/img/fs__book.svg' alt)
+
+
+

@@ -1,0 +1,105 @@
+.pricing {
+  padding: 100px 12px;
+  height: 460px;
+  background-color: rgba(37, 43, 66, 1);
+  @include tablet-middle {
+    height: 700px;
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: center;
+    gap: 160px;
+    @include notebook {
+      gap: 60px;
+    }
+    @include tablet {
+      flex-wrap: wrap;
+      gap: 92px;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+    &_top {
+      font-size: 55px;
+      font-weight: 900;
+      color: $text_white;
+      margin-bottom: $margin;
+      @include tablet {
+        text-align: center;
+      }
+      @include phone_sm {
+        font-size: 42px;
+      }
+    }
+    &_bottom {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 27px;
+      width: 340px;
+      color: $text_white;
+      @include tablet {
+        text-align: center;
+      }
+      @include phone_sm {
+        font-size: 15px;
+        width: 295px;
+      }
+    }
+  }
+  .pricing__right {
+    &_top {
+      color: $text_white;
+      font-size: 16px;
+      font-weight: 700;
+    }
+    &_center {
+      display: flex;
+      margin-top: 8px;
+
+      &-item1 {
+        color: $text_white;
+        font-size: 55px;
+        font-weight: 900;
+      }
+      &-item2 {
+        display: flex;
+        align-items: center;
+        color: $text_white;
+        font-size: 16px;
+        font-weight: 700;
+        margin-left: 10px;
+      }
+    }
+    &_bottom {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 27px;
+      color: $text_white;
+      max-width: 218px;
+      margin-top: 18px;
+      margin-bottom: 32px;
+    }
+  }
+
+  &_button {
+    margin: initial;
+    max-width: 159px;
+    height: 52px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 18px 38px;
+    @include tablet {
+      min-width: 159px;
+      margin: 0 auto 0 auto;
+    }
+    @include phone_sm {
+      min-width: 159px;
+      margin: 0 auto 0 auto;
+    }
+  }
+}

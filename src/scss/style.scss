@@ -1,0 +1,23 @@
+@import "modules/settings.scss";
+@import "modules/ui-kit.scss";
+@import "modules/fs.scss";
+@import "modules/features.scss";
+@import "modules/light.scss";
+@import "modules/subscribe.scss";
+@import "modules/partners.scss";
+@import "modules/testimonials.scss";
+@import "modules/pricing.scss";
+@import "modules/contacts.scss";
+@import "modules/lastblock.scss";
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: $roboto;
+}
+.container {
+  max-width: $contentMaxWidth;
+  padding: 0 $margin;
+  margin: 0 auto;
+}

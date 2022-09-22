@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+
+$roboto: "Roboto", sans-serif;
+$contentMaxWidth: 1300px;
+$margin: 16px;
+$text_white: #ffffff;
+$text_black: #252b42;
+$text_blue: #2091f9;
+
+$desktop: 1200px;
+$notebook: 992px;
+$notebook-middle: 843px;
+$tablet: 769px;
+$tablet-middle: 735px;
+$phone: 576px;
+$phone_sm: 420px;
+
+@mixin desktop {
+  @media (max-width: $desktop) {
+    @content;
+  }
+}
+@mixin notebook {
+  @media (max-width: $notebook) {
+    @content;
+  }
+}
+@mixin notebook-middle {
+  @media (max-width: $notebook-middle) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+@mixin tablet-middle {
+  @media (max-width: $tablet-middle) {
+    @content;
+  }
+}
+@mixin phone {
+  @media (max-width: $phone) {
+    @content;
+  }
+}
+@mixin phone_sm {
+  @media (max-width: $phone_sm) {
+    @content;
+  }
+}

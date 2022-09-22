@@ -1,0 +1,187 @@
+/* Ui kit */
+/* Buttons */
+
+.header__search_form,
+.lastblock__subscribez,
+.header__search {
+  display: flex;
+  align-items: center;
+}
+.lastblock__subscribez {
+  display: grid;
+  row-gap: 10px;
+  margin-top: 30px;
+}
+
+.header__search_button,
+.header__search_form {
+  justify-content: start;
+  padding-left: 39px;
+  font-size: 14px;
+  font-weight: 400;
+  min-width: 274px;
+  height: 54px;
+  border: none;
+  background-color: $text_white;
+  border-radius: $margin * 2.5;
+}
+.lastblock__buttonz,
+.subscribe__suerch_button,
+.header__search_button {
+  font-size: 16px;
+  font-weight: 500;
+  min-width: 142px;
+  padding: 19px 38px;
+  margin-left: $margin;
+  color: $text_blue;
+}
+.lastblock__suerch_form,
+.subscribe__suerch_form {
+  background-color: rgba(232, 232, 232, 1);
+}
+.subscribe__suerch_button {
+  color: $text_white;
+  background-color: $text_blue;
+  text-align: center;
+}
+
+/* Header mobile */
+
+.header__mobile-menu_btn {
+  $weight: 4px;
+  $size: 40px;
+  @include phone {
+    cursor: pointer;
+    max-width: 10vw;
+    height: 30px;
+    position: relative;
+    display: flex;
+    align-items: start;
+    margin-top: -20px;
+    margin-right: -60px;
+  }
+  @include phone_sm {
+    margin-left: -35px;
+  }
+
+  &::before,
+  &::after {
+    @include phone {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: $weight;
+      background-color: $text_white;
+      display: block;
+    }
+  }
+  &::before {
+    @include phone {
+      top: 43%;
+      width: 70%;
+      left: auto;
+      right: 0;
+    }
+  }
+  &::after {
+    @include phone {
+      bottom: 0;
+      right: 0;
+      left: auto;
+      width: 50%;
+    }
+  }
+  & > div {
+    @include phone {
+      height: $weight;
+      background-color: $text_white;
+      width: 100%;
+    }
+  }
+}
+
+.menu_mobile {
+  @include phone {
+    width: 200px;
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(74, 156, 228);
+    padding: $margin;
+    box-shadow: -10px 0 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+  }
+  &_open {
+    @include phone {
+      right: -100%;
+    }
+  }
+}
+.menu_wrap {
+  @include phone {
+    display: grid;
+    row-gap: 1px;
+    margin-top: 10px;
+  }
+}
+.menu-open {
+  @include phone {
+    display: block !important;
+    right: 0;
+  }
+}
+.menu__close-btn {
+  @include phone {
+    $size: 30px;
+    cursor: pointer;
+    width: $size;
+    height: $size;
+    position: relative;
+    margin-left: auto;
+  }
+
+  &::after,
+  &::before {
+    @include phone {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 2px;
+      margin-top: -1px;
+      background-color: $text_black;
+      transform: rotate(45deg);
+    }
+  }
+
+  &::before {
+    @include phone {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+input:focus {
+  outline: none;
+}
+
+.err,
+.err:focus {
+  outline: 3px solid red;
+}
+
+.testimonials__js {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  border-radius: 50px;
+  @include phone {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

@@ -1,0 +1,208 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 200px;
+  @include notebook {
+    margin-top: 100px;
+  }
+  @include tablet {
+    margin-top: 100px;
+  }
+  @include phone {
+    margin-top: 50px;
+  }
+
+  &__wrap {
+    display: flex;
+    @include phone {
+      display: inline;
+    }
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &_top {
+      font-size: 46px;
+      font-weight: 400;
+      margin-bottom: 27px;
+    }
+    &_description {
+      max-width: 298px;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 20px;
+      text-align: center;
+      margin-bottom: 76px;
+    }
+    &_icons {
+      display: flex;
+      gap: 32px;
+      margin-bottom: 75px;
+    }
+  }
+  &__map_phone,
+  &__map {
+    max-width: 870px;
+    max-height: 323px;
+    margin-bottom: 60px;
+
+    &_img {
+      width: 100%;
+    }
+  }
+  &__map_phone {
+    display: none;
+    @include phone {
+      display: block;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__map {
+    @include notebook {
+      width: 90vw;
+      margin: 0 auto 60px auto;
+    }
+    @include phone {
+      display: none;
+    }
+  }
+  .contact {
+    display: flex;
+    justify-content: center;
+    @include phone {
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto 0 auto;
+      justify-content: center;
+      align-items: center;
+    }
+    @include phone_sm {
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include phone {
+        flex-direction: row;
+      }
+      @include phone_sm {
+        flex-direction: row;
+      }
+
+      &:not(:last-child) {
+        margin-right: 30px;
+        @include phone {
+          margin-right: 0;
+          margin-bottom: 30px;
+        }
+        @include phone_sm {
+          margin-bottom: 30px;
+        }
+      }
+      &1-text {
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 18px;
+        text-align: center;
+        width: 208px;
+        margin-top: 20px;
+      }
+
+      &2-text {
+        font-size: 12px;
+        font-weight: 700;
+        margin-top: 34px;
+      }
+
+      &3-text {
+        font-size: 12px;
+        font-weight: 700;
+        margin-top: 40px;
+      }
+      &3-text,
+      &2-text,
+      &1-text {
+        @include phone {
+          margin: initial;
+          margin-left: 20px;
+          text-align: left;
+        }
+        @include phone_sm {
+          margin: initial;
+          margin-left: 20px;
+          text-align: left;
+        }
+      }
+    }
+  }
+  &__massage {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    padding: 52px 50px;
+    border: 1px solid rgba(221, 221, 221, 1);
+    border-radius: 20px;
+    box-shadow: 0 13px 19px rgba(0, 0, 0, 0.07);
+    @include notebook {
+      width: 80vw;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @include phone {
+      padding: 30px 20px;
+    }
+
+    &_title {
+      font-size: 22px;
+      font-weight: 700;
+      text-align: center;
+    }
+    &_form-email,
+    &_form {
+      width: 768px;
+      height: 54px;
+      padding-left: 20px;
+      background-color: rgba(232, 232, 232, 1);
+      border-radius: 39px;
+      margin-top: 45px;
+      border: none;
+      @include notebook {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      @include phone {
+        margin-top: 24px;
+      }
+    }
+    &_form1 {
+      height: 193px;
+      border-radius: initial;
+      padding-bottom: 154px;
+    }
+
+    &_button {
+      max-width: 145px;
+      height: 52px;
+      color: $text_white;
+      background-color: $text_blue;
+      margin: initial;
+      margin-top: 45px;
+      @include phone_sm {
+        margin-top: 26px;
+      }
+    }
+  }
+}
